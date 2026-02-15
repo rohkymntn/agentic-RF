@@ -1,0 +1,38 @@
+# Agentic RF - AI-Driven Antenna Design System
+# Core scientific computing
+numpy>=1.24
+scipy>=1.10
+
+# RF / microwave engineering
+scikit-rf>=0.30
+
+# Optimization
+scikit-optimize>=0.9
+pymoo>=0.6
+pycma>=3.3
+
+# EM solvers (optional - install if available)
+# openEMS  # Install via system package manager + python bindings
+# PyNEC    # pip install PyNEC
+
+# Visualization
+matplotlib>=3.7
+plotly>=5.15
+
+# Web frontend
+streamlit>=1.30
+
+# Data models & validation
+pydantic>=2.0
+
+# LLM integration
+openai>=1.0
+anthropic>=0.20
+
+# CLI & UX
+rich>=13.0
+click>=8.1
+PyYAML>=6.0
+
+# Utilities
+pandas>=2.0

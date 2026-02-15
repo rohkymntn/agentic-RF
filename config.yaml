@@ -1,0 +1,45 @@
+# Agentic RF Configuration
+# ========================
+
+# LLM Provider
+agent:
+  provider: openai          # openai | anthropic
+  model: gpt-4o             # model name
+  max_tool_calls: 10        # max tool calls per turn
+
+# Default design targets
+design:
+  target_freq_mhz: 403.5    # MICS band center
+  band_start_mhz: 402.0
+  band_stop_mhz: 405.0
+  max_size_mm: 15.0
+  z0: 50.0                  # reference impedance (Ω)
+  application: implant       # implant | iot | wearable | wpt
+
+# Optimization defaults
+optimization:
+  method: cmaes              # bayesian | cmaes | nsga2
+  n_iterations: 50
+  s11_threshold_db: -10.0
+  min_bandwidth_mhz: 3.0
+  sar_constraint: false
+  max_input_power_mw: 25.0
+
+# Solver preferences
+solver:
+  primary: analytical        # analytical | openems | nec2
+  mesh_resolution: 20        # cells per wavelength (for OpenEMS)
+  end_criteria: 1.0e-5       # convergence (for OpenEMS)
+  max_timesteps: 500000
+
+# Visualization
+visualization:
+  style: default
+  dpi: 150
+  save_format: png           # png | svg | pdf
+
+# Directories
+paths:
+  output_dir: ./output
+  measurement_dir: ./measurements
+  scripts_dir: ./scripts
